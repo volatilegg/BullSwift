@@ -11,7 +11,7 @@ DispatchQueue.main.async {
 }
 ```
 
-_Reference: 
+_Reference:_ 
 - http://stackoverflow.com/questions/31951704/this-application-is-modifying-the-autolayout-engine-from-a-background-thread-wh
 
 _Reason:_
