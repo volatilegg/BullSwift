@@ -1,4 +1,5 @@
-**Bug001 - hide/show keyboard with multiple text fields **
+**Bug001 - hide/show keyboard with multiple text fields**
+
 _Issue:_
 - Dealing with multiple text fields and some become invisible when the keyboard shown
 
