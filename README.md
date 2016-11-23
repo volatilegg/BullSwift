@@ -8,7 +8,7 @@ iOS common things and where to find them aka swift sharing system aka s3
 
 Template for a bug:
 
-*Title*: Id of the bug (e.g: Bug-001) and name/summary of the bug
+**Title**: Id of the bug (e.g: Bug-001) and name/summary of the bug
 
 *Issue*: Detailed description of bugs, should also include code snippet, use cases or screenshots
 
@@ -24,7 +24,7 @@ Template for a bug:
 
 Template for a tip:
 
-*Title*: Id of the tip (e.g: Tip-001) and name/summary of the tip
+**Title**: Id of the tip (e.g: Tip-001) and name/summary of the tip
 
 *Description*: Detailed description of tips, should also include code snippet, use cases or screenshots
 
