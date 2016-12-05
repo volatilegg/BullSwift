@@ -1,0 +1,7 @@
+**Bug013 - Creating project with no storyboard**
+_Issue:_
+-Cannot see any view
+
+_Solution:_
+- Remove "Main storyboard file base name" in Info.plist
+- _Important_: Set size for UIWindow in App Delegate. This step is not required in Xcode 7 or earlier versions, but need to be implemented in Xcode 8
