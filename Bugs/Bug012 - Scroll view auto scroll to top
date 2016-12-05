@@ -1,0 +1,11 @@
+**Bug012 - Scroll view auto scroll to top**
+
+_Issue:_
+- Scroll view auto scroll to top after getting back from a pop, in a pageview for example
+
+_Solution:_
+- Move all codes that cause scrollview content size change to view did load
+- Have a local var to store contentoffset before the pop operation, set scrollview's contentoffset to that value in viewwillappear
+
+_Reasons:_
+- Content size changes cause scroll view's bounds change, which triggers scrollviewdidscroll and scroll view will automatically scroll back to top
