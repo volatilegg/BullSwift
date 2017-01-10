@@ -1,13 +1,16 @@
-Bug012: NSTimer handler
+**Bug012: NSTimer handler**
 
 _Issue_:
-Timer is invalidated when its scheduled function is in action. This would lead to some side effects when cleanup codes (codes run after timer is invalided) take no effect because they are preempted.
+Timer is invalidated when its scheduled function is in action. This would lead to some side effects when cleanup codes (codes run after timer is invalided) have no effect because they are preempted.
 
 Example: 
 
 ```objective-c
 NSInteger a = 0;
-NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:1.0f repeats:false block:^(NSTimer * _Nonnull timer) {
+NSTimer* timer = [NSTimer 
+                 scheduledTimerWithTimeInterval:1.0f 
+                 repeats:false 
+                 block:^(NSTimer * _Nonnull timer) {
     a = a +1;
     }];
 [timer invalidate];
@@ -30,4 +33,5 @@ Result: a = 0 (if action block is finished BEFORE invalidation) OR a = 1 (if act
 
 _Remember_:
 
-No specific solution is found yet. Best practice is to avoid putting complicated or non-threadsafe codes inside scheduled function.
+(Update later)
+Currently, no specific solution is found yet. Best practice is to avoid putting complicated or non-threadsafe codes inside scheduled function to avoid runtime problem.
