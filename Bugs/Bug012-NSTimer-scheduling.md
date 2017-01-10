@@ -11,8 +11,8 @@ NSTimer* timer = [NSTimer
                  scheduledTimerWithTimeInterval:1.0f 
                  repeats:false 
                  block:^(NSTimer * _Nonnull timer) {
-    a = a +1;
-    }];
+                          a = a +1;
+                  }];
 [timer invalidate];
 timer = nil;
 a=0;
@@ -29,7 +29,7 @@ Result: a = 0;
 **Case 2**: If timer is stopped at a really small interval after scheduled function runs, say 5.0000001s, there is chance that the cleanup codes will be interrupted.
 Reason: The action block is in the middle of its execution and will eventually finish its run even if the timer is invalidated.
 Hence, the cleanup codes may or may not be interrupted, depends on how the action block acts.
-Result: a = 0 (if action block is finished BEFORE invalidation) OR a = 1 (if action block is finished AFTER invalidation).
+Result: a = 0 (if action block finishes BEFORE invalidation) OR a = 1 (if action block finishes AFTER invalidation).
 
 _Remember_:
 
